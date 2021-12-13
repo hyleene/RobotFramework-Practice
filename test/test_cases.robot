@@ -6,12 +6,12 @@ Documentation   A test suite with one test for each of the eight test cases
 Resource        resources.robot
 
 *** Test Cases ***
-Valid Login
+Successful user log in
     Login As Valid User
     Product Page Should Be Open
     [Teardown]  Close Browser
 
-Locked Out Login
+Unsuccessful user log in by a locked out user
     Open Browser to Login Page
     Input Username   ${LOCKED OUT USER}
     Input Pass    ${VALID PASSWORD}
